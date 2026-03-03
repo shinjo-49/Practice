@@ -1,7 +1,9 @@
 ﻿namespace Practice;
 
+/*
 public class Person
 {
+    public static string howToMove = "歩く";//説明は初期値で「歩く」としているため、外部から変更できない
     public Person():this("名無し", 0, 0000)
     {
         Console.WriteLine("引数なしのコンストラクタが呼び出されました");
@@ -16,7 +18,6 @@ public class Person
     {
         Name = name;
         Age = age;
-        HowToMove = "歩く";//説明は初期値で「歩く」としているため、外部から変更できない
         PassWord = password;
     }
  
@@ -34,17 +35,12 @@ public class Person
     {
         set;private get;
     }
-
-    public string HowToMove//プロパティにsetアクセサーがないため、外部から変更できない。コンストラクタ内の初期値で設定したものを読み取るだけ
-    {
-        get;private set;
-    }
-    
      
      public void Introduce()
     {
-        Console.WriteLine($"名前：{Name} 年齢：{Age}歳 説明：{HowToMove}");
+        Console.WriteLine($"名前：{Name} 年齢：{Age}歳 説明：{howToMove}");
     }   
     
 
 }
+*/
