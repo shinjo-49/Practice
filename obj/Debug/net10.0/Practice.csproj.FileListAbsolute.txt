@@ -12,3 +12,4 @@ C:\Users\shinj\プログラミング\コード\C# project\Practice\obj\Debug\net
 C:\Users\shinj\プログラミング\コード\C# project\Practice\obj\Debug\net10.0\Practice.pdb
 C:\Users\shinj\プログラミング\コード\C# project\Practice\obj\Debug\net10.0\Practice.genruntimeconfig.cache
 C:\Users\shinj\プログラミング\コード\C# project\Practice\obj\Debug\net10.0\ref\Practice.dll
+C:\Users\shinj\プログラミング\コード\C# project\Practice\obj\Debug\net10.0\Practice.sourcelink.json
