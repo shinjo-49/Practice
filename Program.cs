@@ -6,21 +6,21 @@ class Program
 {
     static void Main()
     {
-        Person p1,p2,p3;
-        p1 = new Person();
-        p2 = new Person("鈴木一郎", 30);
-        p3 = new Person("佐藤花子", 25, 5678);
-        
-        //パスワードは外部から変更できるが、プロパティにgetアクセサーがないため読み取ることはできない
-        //p1.HowToMove = "このように操作します";←プロパティにsetアクセサーがないためエラー
+        String[] a = new String[10000];
 
-        
+        for (int i = 0; i < a.Length; i++)
+        {
+            a[i] = new String('M', 10000);
+        }
 
-    
+        Console.WriteLine("文字列生成後：{0}", GC.GetTotalMemory(false)); 
 
-        /*Console.WriteLine($"名前：{p1.Name} 年齢：{p1.Age}歳 説明：{p1.HowToMove}");*///パスワードは  外部から読み取ることができないため、表示されない
-        p1.Introduce();
-        p2.Introduce();
-        p3.Introduce();
+        a = null;
+
+        Console.WriteLine("aへの参照解除後：{0}", GC.GetTotalMemory(false));
+
+        GC.Collect();
+
+        Console.WriteLine("GC.Collect()実行後：{0}", GC.GetTotalMemory(false));
     }
 }
