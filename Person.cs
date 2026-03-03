@@ -4,7 +4,9 @@ public class Person//プロパティを通してフィールドにアクセス
 {
     protected string name = "";
     protected int age = 0;
-    protected string sex = "回答なし";
+    protected string howToMove = "こんな風に動かします";
+
+    protected int password = 0000;
  
     public string Name 
     {
@@ -17,26 +19,22 @@ public class Person//プロパティを通してフィールドにアクセス
         set{age = value;}
         get{return age;}
     }
+
+    public int PassWord
+    {
+        set{password = value;}
+    }
+
+    public string HowToMove
+    {
+        get{return howToMove;}
+    }
     
+     /*
      public void Introduce()
     {
-        Console.WriteLine($"名前：{name} 年齢：{age}歳 性別：{sex}");
+        Console.WriteLine($"名前：{name} 年齢：{age}歳 説明：{HowToMove}");
     }   
+    */
 
-}
-
-public class Person2 : Person//Personクラスを継承し、新たにメソッドを追加することでPersonクラスの呼び出し機能を拡張
-{
-    public void SetInfo(string name, int age, string sex)
-    {
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-    }
-    public void SetInfo(string name, int age)
-    {
-        this.name = name;
-        this.age = age;
-    }
-       
 }
