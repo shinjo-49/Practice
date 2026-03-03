@@ -2,7 +2,7 @@
 
 public class Person
 {
-        public Person(string name = "名無し", int age = 0, int password = 0000)
+        public Person(string name = "名無し", int age = 0, int password = 0000)//初期値ありのコンストラクタ
     {
         Name = name;
         Age = age;
@@ -10,7 +10,7 @@ public class Person
         PassWord = password;
     }
  
-    public string Name //自動実装プロパティは、フィールドを自動的に生成してくれるプロパティのことだが、フィールドと違って初期値がないため、nullになる可能性がある
+    public string Name //
     {
         set;get;
     }
@@ -25,7 +25,7 @@ public class Person
         set;private get;
     }
 
-    public string HowToMove
+    public string HowToMove//プロパティにsetアクセサーがないため、外部から変更できない。コンストラクタ内の初期値で設定したものを読み取るだけ
     {
         get;private set;
     }
