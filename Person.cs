@@ -1,46 +1,60 @@
 ﻿namespace Practice;
 
-/*
-public class Person
-{
-    public static string howToMove = "歩く";//説明は初期値で「歩く」としているため、外部から変更できない
-    public Person():this("名無し", 0, 0000)
-    {
-        Console.WriteLine("引数なしのコンストラクタが呼び出されました");
-    }//引数なしのコンストラクタ
 
-    public Person(string name, int age):this(name, age, 0000)
-    {
-        Console.WriteLine("引数2つのコンストラクタが呼び出されました");
-    }
-        //引数2つのコンストラクタ
-    public Person(string name , int age, int password)//引数3つのコンストラクタ
-    {
-        Name = name;
-        Age = age;
-        PassWord = password;
-    }
- 
-    public string Name //
-    {
-        set;get;
+   class BaseballPlayer
+    {   protected string position;
+        public BaseballPlayer(string position)
+        {
+            this.position = position;
+            Console.WriteLine($"{position}について知りたいですね！");
+        }
+        public virtual void BestPlayer()
+        {
+            Console.WriteLine($"このポジションにおける最高の選手を参照します。");
+        }
+        public virtual void ShowTeam()
+        {
+            Console.WriteLine($"この選手がプレーしている球団を参照します。");
+        }
+
     }
 
-    public int Age
+    class Pitcher : BaseballPlayer
     {
-        set;get;
-    }
+        public Pitcher() : base("投手")
+        {
 
-    public int PassWord
-    {
-        set;private get;
-    }
-     
-     public void Introduce()
-    {
-        Console.WriteLine($"名前：{Name} 年齢：{Age}歳 説明：{howToMove}");
-    }   
-    
+        }
 
-}
-*/
+        public override void BestPlayer()
+        {
+            base.BestPlayer();
+            Console.WriteLine("このポジションにおける最高の選手は山本由伸です。");
+        }
+
+        public override void ShowTeam()
+        {
+            base.ShowTeam();
+            Console.WriteLine("この選手はロサンゼルス・ドジャースに所属しています。");
+        }
+
+    }
+    class Catcher : BaseballPlayer
+    {
+        public Catcher() : base("キャッチャー")
+        {
+
+        }
+
+        public override void BestPlayer()
+        {
+            base.BestPlayer();
+            Console.WriteLine("このポジションにおける最高の選手は坂本誠志郎です。");
+        }
+
+         public override void ShowTeam()
+        {
+            base.ShowTeam();
+            Console.WriteLine("この選手は阪神タイガースに所属しています。");
+        }
+    }
