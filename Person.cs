@@ -1,4 +1,4 @@
-﻿namespace Practice;
+﻿/*namespace Practice;
 
 
    class BaseballPlayer
@@ -58,3 +58,4 @@
             Console.WriteLine("この選手は阪神タイガースに所属しています。");
         }
     }
+*/
